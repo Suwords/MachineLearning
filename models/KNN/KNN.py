@@ -126,6 +126,10 @@ if __name__ == '__main__':
     # print(knn.predict(X_train))
     print(knn.score(X_train, Y_train))
     print('预测结果：{}'.format(knn.predict(x_test)))
+    # 存储模型
+    import joblib
+
+    joblib.dump(knn, 'knn.m')
     print('-----------下面测试一下鸢尾花数据-----------')
     from sklearn.datasets import load_iris
 
